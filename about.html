@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울 야간 경제 분석 블로그 소개 | NRB 압구정 가이드</title>
+    <meta name="description" content="NRB 압구정 가이드는 서울 유흥 트렌드와 야간 경제를 객관적인 데이터와 심층 분석으로 조명합니다. 우리의 전문성과 신뢰도 높은 정보 제공 원칙을 소개합니다.">
+    <meta name="keywords" content="NRB 압구정 가이드, 블로그 소개, 운영 철학, 전문성, 객관적 분석, 유흥 정보 신뢰, 서울 야간 문화">
+    <link rel="canonical" href="https://desk.nrb-apgujeong-guide.xyz/about.html">
+    <!-- BPAAS Design System Meta -->
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-midnight-gold">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset & Variables */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        :root {
+            --color-primary: #1a1a1a; /* Dark background */
+            --color-secondary: #ffcc00; /* Gold/Accent */
+            --color-text: #e0e0e0; /* Light text */
+            --color-text-secondary: #b0b0b0; /* Slightly dimmer text */
+            --color-background-card: #2a2a2a; /* Slightly lighter dark for cards */
+            --color-border: #444;
+            --font-family-base: 'Noto Sans KR', sans-serif;
+            --spacing-unit: 1rem;
+            --border-radius-base: 0.25rem;
+            --header-height: 4rem; /* Example height */
+        }
+        body {
+            font-family: var(--font-family-base);
+            background-color: var(--color-primary);
+            color: var(--color-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* Brutalist Layout & Structure Rules */
+        .v-foot-cvs4 { /* Footer */
+            background-color: var(--color-background-card);
+            color: var(--color-text-secondary);
+            padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+            border-top: 1px solid var(--color-border);
+            text-align: center;
+            font-size: 0.8rem;
+            margin-top: auto; /* Pushes footer to the bottom */
+        }
+        /* Header & Navigation */
+        .k-card-l05l { /* General Card/Section Container */
+            background-color: var(--color-background-card);
+            border: 1px solid var(--color-border);
+            border-radius: var(--border-radius-base);
+            padding: calc(var(--spacing-unit) * 2);
+            margin: var(--spacing-unit);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .k-card-l05l-inner { /* Inner container for card content */
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .x-btn-vejy { /* Button style */
+            display: inline-block;
+            background-color: var(--color-secondary);
+            color: var(--color-primary);
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: var(--border-radius-base);
+            cursor: pointer;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .x-btn-vejy:hover {
+            background-color: #ffd700; /* Slightly brighter gold */
+        }
+
+        /* Navigation specifics */
+        .v-item-gd5m { /* Navigation item */
+            list-style: none;
+            display: inline-block; /* For horizontal nav */
+            margin-left: var(--spacing-unit);
+        }
+        .v-item-gd5m a { /* Navigation link */
+            color: var(--color-text);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            display: block;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+        .v-item-gd5m a:hover {
+            color: var(--color-secondary);
+            background-color: rgba(255, 204, 0, 0.1);
+            border-radius: var(--border-radius-base);
+        }
+
+        /* Specific styles for header/nav structure (Hamburger menu pattern) */
+        .header-main {
+            background-color: var(--color-background-card);
+            border-bottom: 1px solid var(--color-border);
+            padding: var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .header-logo a {
+            color: var(--color-secondary);
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .nav-menu {
+            display: flex; /* Default for larger screens */
+        }
+        .nav-toggle { /* Hamburger icon */
+            display: none; /* Hidden by default */
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: var(--color-text);
+            cursor: pointer;
+        }
+
+        /* Responsive-768 pattern */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none; /* Hide nav links by default on small screens */
+                flex-direction: column;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                background-color: var(--color-background-card);
+                border-top: 1px solid var(--color-border);
+            }
+            .nav-menu.is-open { /* Class to show menu when toggled */
+                display: flex;
+            }
+            .nav-toggle {
+                display: block; /* Show hamburger on small screens */
+            }
+            .v-item-gd5m {
+                margin: 0;
+                width: 100%;
+                text-align: center;
+            }
+            .v-item-gd5m a {
+                padding: 1rem;
+                border-bottom: 1px solid var(--color-border);
+            }
+            .v-item-gd5m:last-child a {
+                border-bottom: none;
+            }
+        }
+
+        /* Main content layout */
+        main {
+            flex-grow: 1; /* Allows main content to fill available space */
+            max-width: 1200px;
+            margin: var(--spacing-unit) auto; /* Centers content with margin */
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* New Page Specific Layout for '소개' */
+        .section-header {
+            text-align: center;
+            margin-bottom: calc(var(--spacing-unit) * 3);
+        }
+        .section-header h1 {
+            font-size: 2.8rem;
+            color: var(--color-secondary);
+            margin-bottom: var(--spacing-unit);
+            line-height: 1.2;
+        }
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--color-text-secondary);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .grid-container {
+            display: grid;
+            gap: calc(var(--spacing-unit) * 2);
+            margin-top: calc(var(--spacing-unit) * 3);
+        }
+
+        @media (min-width: 768px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+            }
+        }
+
+        .k-card-l05l h2 {
+            color: var(--color-secondary);
+            margin-bottom: var(--spacing-unit);
+            font-size: 1.8rem;
+        }
+        .k-card-l05l p {
+            color: var(--color-text);
+            margin-bottom: var(--spacing-unit);
+        }
+        .k-card-l05l ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .k-card-l05l ul li {
+            position: relative;
+            padding-left: calc(var(--spacing-unit) * 1.5);
+            margin-bottom: 0.5rem;
+            color: var(--color-text-secondary);
+        }
+        .k-card-l05l ul li::before {
+            content: '»'; /* Custom bullet */
+            color: var(--color-secondary);
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('is-open');
+                });
+            }
+        });
+    </script>
+  <meta property="og:url" content="https://desk.nrb-apgujeong-guide.xyz/about.html">
+</head>
+<body>
+    <header class="header-main">
+        <div class="header-logo">
+            <a href="/">NRB 압구정 가이드</a>
+        </div>
+        <button class="nav-toggle" aria-label="메뉴 열기/닫기">☰</button>
+        <nav class="nav-menu">
+            <ul>
+                <li class="v-item-gd5m"><a href="/">홈</a></li>
+                <li class="v-item-gd5m"><a href="/about">소개</a></li>
+                <li class="v-item-gd5m"><a href="/blog">블로그</a></li>
+                <li class="v-item-gd5m"><a href="/contact">문의</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="k-card-l05l section-header">
+            <div class="k-card-l05l-inner">
+                <h1>NRB 압구정 가이드: 서울 야간 경제의 심층 분석</h1>
+                <p>서울의 역동적인 야간 경제와 유흥 트렌드를 객관적인 시각으로 분석하고, 심층적인 정보를 제공합니다. 복잡한 시장 속에서 사용자들에게 명확하고 신뢰할 수 있는 가이드를 제시하는 것이 우리의 사명입니다.</p>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="k-card-l05l">
+                <div class="k-card-l05l-inner">
+                    <h2>우리의 미션과 비전</h2>
+                    <p>NRB 압구정 가이드는 정보의 불균형을 해소하고, 서울 야간 문화에 대한 깊이 있는 이해를 돕기 위해 설립되었습니다. 우리는 단순히 정보를 나열하는 것을 넘어, 각 업종의 본질과 트렌드를 분석하여 사용자들이 현명한 결정을 내릴 수 있도록 돕는 데 집중합니다.</p>
+                    <p>우리의 비전은 서울 야간 경제의 가장 신뢰할 수 있는 정보 허브가 되어, 투명하고 객관적인 분석을 통해 건강한 정보 생태계를 구축하는 것입니다.</p>
+                </div>
+            </div>
+
+            <div class="k-card-l05l">
+                <div class="k-card-l05l-inner">
+                    <h2>전문성과 분석 방법론</h2>
+                    <p>우리의 모든 콘텐츠는 철저한 시장 조사와 데이터 분석을 기반으로 합니다. 특정 업종에 대한 주관적 판단이나 편향된 시각을 배제하고, 다음과 같은 원칙을 준수합니다:</p>
+                    <ul>
+                        <li>객관적 데이터 기반 분석: 통계, 시장 보고서, 전문가 의견 종합</li>
+                        <li>업종별 심층 비교: 셔츠룸, 룸싸롱, 가라오케 등 각 업종의 특징, 장단점 명확화</li>
+                        <li>지속적인 트렌드 모니터링: 변화하는 야간 경제 흐름 실시간 반영</li>
+                        <li>투명한 정보 공개: 출처 명시 및 정보 업데이트 주기 고지</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="k-card-l05l">
+                <div class="k-card-l05l-inner">
+                    <h2>신뢰할 수 있는 정보의 가치</h2>
+                    <p>유흥 관련 정보는 종종 과장되거나 왜곡되기 쉽습니다. NRB 압구정 가이드는 이러한 문제점을 인식하고, 사용자들에게 검증된 사실만을 제공함으로써 정보의 가치를 높이고자 합니다. 우리는 어떤 상업적 이해관계나 특정 업소와의 연관성 없이 독립적인 관점에서 정보를 생산합니다.</p>
+                    <p>이러한 원칙은 사용자들이 서울의 야간 경제를 보다 안전하고 현명하게 탐색하는 데 필수적인 기반이 됩니다.</p>
+                </div>
+            </div>
+
+            <div class="k-card-l05l">
+                <div class="k-card-l05l-inner">
+                    <h2>문의 및 협력</h2>
+                    <p>NRB 압구정 가이드는 항상 독자들의 의견을 경청하며, 더 나은 정보 제공을 위해 노력합니다. 유흥 트렌드 및 야간 경제에 대한 심층적인 분석이나 정보 제공에 관심 있는 전문가, 연구 기관과의 협력 가능성도 열려 있습니다.</p>
+                    <p>궁금한 점이나 제안 사항이 있으시면 언제든지 <a href="/contact" class="x-btn-vejy">문의하기</a> 페이지를 통해 연락 주시기 바랍니다.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="v-foot-cvs4">
+        <div class="k-card-l05l-inner">
+            <p>&copy; 2024 NRB 압구정 가이드. All rights reserved.</p>
+            <p>본 블로그의 모든 콘텐츠는 정보 제공을 목적으로 하며, 어떠한 상업적 행위도 유도하지 않습니다.</p>
+        </div>
+    </footer>
+</body>
+</html>

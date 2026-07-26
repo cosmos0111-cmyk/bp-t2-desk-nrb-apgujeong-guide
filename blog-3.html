@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서울 야간 경제 및 업종별 트렌드 분석 | 트렌드</title>
+    <meta name="description" content="서울의 야간 경제와 다양한 업종별 트렌드를 객관적으로 분석하고 비교하는 정보 블로그입니다. 셔츠룸, 룸싸롱, 가라오케 등 각 업종의 이용 방식과 선택 기준을 제공합니다.">
+    <meta name="keywords" content="유흥 트렌드, 서울 야간 경제, 업종별 분석, 가라오케, 셔츠룸, 룸싸롱, 이용 가이드">
+    <link rel="canonical" href="https://desk.nrb-apgujeong-guide.xyz/blog-3.html">
+    
+    <!-- BPAAS Design System Meta -->
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-midnight-gold">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS Reset & Variables */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --bg-color: #0A0A0C;
+            --container-bg: #121215;
+            --primary-color: #D4AF37; /* Midnight Gold */
+            --primary-hover: #AA841C;
+            --text-color: #F5F5F7;
+            --text-muted: #8E8E93;
+            --border-color: #222225;
+            --font-sans: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-serif: 'Playfair Display', 'Noto Serif KR', serif;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: var(--font-sans);
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Layout & Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header & Navigation (k-card-l05l) */
+        .k-card-l05l {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(10, 10, 12, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .k-card-l05l-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 72px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .brand-logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .v-item-gd5m a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition);
+            letter-spacing: -0.2px;
+        }
+
+        .v-item-gd5m a:hover,
+        .v-item-gd5m a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            padding: 180px 0 80px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            background: radial-gradient(circle at 50% 30%, #1c1c24 0%, #0a0a0c 70%);
+        }
+
+        .hero-tag {
+            font-family: var(--font-serif);
+            font-style: italic;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            display: inline-block;
+            letter-spacing: 1px;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 900;
+            line-height: 1.25;
+            letter-spacing: -1.5px;
+            margin-bottom: 24px;
+            color: var(--text-color);
+        }
+
+        .hero-desc {
+            max-width: 720px;
+            margin: 0 auto;
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+
+        /* Grid Layout for Editorial Content */
+        .grid-section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            margin-bottom: 48px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: -0.8px;
+        }
+
+        .section-subtitle {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-family: var(--font-serif);
+        }
+
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        /* Editorial Cards */
+        .trend-card {
+            background-color: var(--container-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 32px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .trend-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--primary-color);
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            line-height: 1.35;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+
+        .card-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+            font-weight: 300;
+        }
+
+        .card-link {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .card-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* Detailed Analysis Section */
+        .detail-section {
+            background-color: var(--container-bg);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+            padding: 80px 0;
+        }
+
+        .analysis-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .analysis-text h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        .analysis-text p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 1.05rem;
+            font-weight: 300;
+        }
+
+        .analysis-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .stat-box {
+            border-left: 3px solid var(--primary-color);
+            padding-left: 20px;
+        }
+
+        .stat-num {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            line-height: 1.1;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 0;
+        }
+
+        .faq-grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+            padding: 24px 0;
+        }
+
+        .faq-question {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+
+        .faq-answer {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            font-weight: 300;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background-color: #121215;
+            padding: 80px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .cta-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            letter-spacing: -0.8px;
+        }
+
+        .cta-desc {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 32px;
+            font-size: 1rem;
+        }
+
+        .x-btn-vejy {
+            background-color: var(--primary-color);
+            color: #0A0A0C;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+        }
+
+        .x-btn-vejy:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Footer (v-foot-cvs4) */
+        .v-foot-cvs4 {
+            background-color: var(--bg-color);
+            border-top: 1px solid var(--border-color);
+            padding: 60px 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .v-foot-cvs4-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .footer-info {
+            max-width: 400px;
+        }
+
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .footer-column h4 {
+            color: var(--text-color);
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-column ul li a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .editorial-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .analysis-wrapper {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            .editorial-grid {
+                grid-template-columns: 1fr;
+            }
+            .k-card-l05l-inner {
+                padding: 0 16px;
+            }
+            .nav-menu {
+                gap: 16px;
+            }
+            .v-item-gd5m a {
+                font-size: 0.85rem;
+            }
+            .v-foot-cvs4-inner {
+                flex-direction: column;
+                gap: 30px;
+            }
+            .footer-links {
+                flex-direction: column;
+                gap: 24px;
+            }
+        }
+    </style>
+  <meta property="og:url" content="https://desk.nrb-apgujeong-guide.xyz/blog-3.html">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="k-card-l05l">
+        <div class="k-card-l05l-inner">
+            <a href="/" class="brand-logo">SEOUL INSIGHT</a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="v-item-gd5m"><a href="/">홈</a></li>
+                    <li class="v-item-gd5m"><a href="/trend" class="active">트렌드</a></li>
+                    <li class="v-item-gd5m"><a href="/comparison">업종 비교</a></li>
+                    <li class="v-item-gd5m"><a href="/guide">이용 가이드</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <span class="hero-tag">Economic Insight & Market Trend</span>
+            <h1 class="hero-title">서울 야간 경제의<br>구조적 변화와 시장 트렌드</h1>
+            <p class="hero-desc">
+                빅데이터와 거시경제적 지표를 바탕으로 서울 주요 권역의 야간 상권 변화 트렌드를 객관적으로 분석합니다. 셔셔룸, 룸싸롱, 가라오케 등 세부 업종별 소비 흐름의 변화를 진단합니다.
+            </p>
+        </div>
+    </section>
+
+    <!-- Trend Grid Section -->
+    <section class="grid-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">최신 유흥 트렌드 분석</h2>
+                <span class="section-subtitle">Issue & Analysis</span>
+            </div>
+            <div class="editorial-grid">
+                <!-- Card 1 -->
+                <div class="trend-card">
+                    <div>
+                        <div class="card-meta">Market Analysis</div>
+                        <h3 class="card-title">소비 양극화와 가성비 중심의 업종 재편</h3>
+                        <p class="card-excerpt">
+                            경기 둔화 장기화에 따라 전통적인 고비용 룸싸롱 구조에서 효율성과 투명성을 강조한 셔츠룸 및 하이브리드 가라오케 형태로 소비층이 빠르게 이동하고 있습니다.
+                        </p>
+                    </div>
+                    <a href="/comparison" class="card-link">자세히 보기 &rarr;</a>
+                </div>
+                <!-- Card 2 -->
+                <div class="trend-card">
+                    <div>
+                        <div class="card-meta">Geographical Shift</div>
+                        <h3 class="card-title">강남·마포 권역의 상권 집중화 현상</h3>
+                        <p class="card-excerpt">
+                            교통 허브와 오피스 밀집 지역을 중심으로 야간 경제 활동이 집중되고 있으며, 각 권역별로 타깃 고객층과 운영 형태가 뚜렷하게 차별화되는 경향을 보입니다.
+                        </p>
+                    </div>
+                    <a href="/guide" class="card-link">자세히 보기 &rarr;</a>
+                </div>
+                <!-- Card 3 -->
+                <div class="trend-card">
+                    <div>
+                        <div class="card-meta">Consumer Behavior</div>
+                        <h3 class="card-title">투명한 정찰제 및 사전 예약제의 정착</h3>
+                        <p class="card-excerpt">
+                            과거의 불투명한 정산 방식에서 탈피하여, 사전에 명확한 비용 가이드를 확인하고 예약하는 디지털 플랫폼 기반의 소비 패턴이 주류 트렌드로 자리 잡았습니다.
+                        </p>
+                    </div>
+                    <a href="/guide" class="card-link">자세히 보기 &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Analysis Section -->
+    <section class="detail-section">
+        <div class="container">
+            <div class="analysis-wrapper">
+                <div class="analysis-text">
+                    <h3>정량적 지표로 보는<br>업종별 포지셔닝</h3>
+                    <p>
+                        서울 야간 경제의 구조적 핵심은 각 업종군이 제공하는 서비스 형태와 비용 구조의 차이에서 기인합니다. 가라오케는 단체 모임과 사교 중심의 대중적인 성격을 띠는 반면, 셔츠룸과 룸싸롱은 밀착도 높은 서비스와 프라이빗한 비즈니스 성격이 강합니다.
+                    </p>
+                    <p>
+                        최근의 트렌드는 투명한 정보 공개를 요구하는 소비자의 목소리가 커짐에 따라, 정찰제 기반의 매장이 높은 신뢰도를 확보하고 있습니다.
+                    </p>
+                </div>
+                <div class="analysis-stats">
+                    <div class="stat-box">
+                        <div class="stat-num">35%</div>
+                        <div class="stat-label">가성비 중심 업종 전환율</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">1:1</div>
+                        <div class="stat-label">맞춤형 서비스 선호 비율 증가</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">80%</div>
+                        <div class="stat-label">모바일 사전 예약 이용률</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-num">강남</div>
+                        <div class="stat-label">야간 소비 트렌드 주도 권역</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">트렌드에 관한 자주 묻는 질문</h2>
+                <span class="section-subtitle">FAQ</span>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4 class="faq-question">Q. 최근 셔츠룸이 대중화된 비결은 무엇인가요?</h4>
+                    <p class="faq-answer">A. 셔츠룸은 기존 룸싸롱의 무거운 분위기와 높은 비용 부담을 획기적으로 낮추면서도, 체계적이고 규격화된 시스템을 도입하여 젊은 직장인층을 중심으로 빠른 대중화를 이루었습니다.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-question">Q. 가라오케와 전통 룸싸롱의 가장 큰 차이점은 무엇인가요?</h4>
+                    <p class="faq-answer">A. 가라오케는 음악과 친목 도모 중심의 캐주얼한 분위기로 단체 회식이나 모임에 적합한 반면, 전통 룸싸롱은 철저히 프라이빗한 비즈니스 접대와 하이엔드 서비스에 특화되어 있습니다.</p>
+                </div>
+                <div class="faq-item">
+                    <h4 class="faq-question">Q. 허위 정보나 과다 청구를 피하기 위한 가이드는 어떤 것이 있나요?</h4>
+                    <p class="faq-answer">A. 반드시 사전에 정찰제 가격을 명시하는 검증된 커뮤니티나 블로그를 통해 세부 비용(주류, 안주, 봉사료 등)을 확인하고 담당자와 소통 후 방문하는 것이 가장 안전합니다.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">실패 없는 선택을 위한 업종별 정밀 분석</h2>
+            <p class="cta-desc">각 업종의 특징, 예상 소요 비용, 시스템 차이를 객관적으로 비교 분석한 가이드를 지금 바로 확인해 보세요.</p>
+            <a href="/comparison" class="x-btn-vejy">업종별 정밀 비교 확인하기</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="v-foot-cvs4">
+        <div class="container">
+            <div class="v-foot-cvs4-inner">
+                <div class="footer-info">
+                    <div class="footer-logo">SEOUL NIGHT INSIGHT</div>
+                    <p>본 블로그는 서울 야간 경제 상권의 트렌드 정보와 객관적인 업종별 분석을 제공하는 정보성 웹사이트입니다. 안전하고 건전한 야간 문화 조성을 지향합니다.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>바로가기</h4>
+                        <ul>
+                            <li><a href="/">홈</a></li>
+                            <li><a href="/trend">트렌드 분석</a></li>
+                            <li><a href="/comparison">업종 비교</a></li>
+                            <li><a href="/guide">이용 가이드</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>정책 및 안내</h4>
+                        <ul>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">이용약관</a></li>
+                            <li><a href="#">책임의 한계 및 고지</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Seoul Night Insight. All rights reserved.</p>
+                <p>Designed for Editorial Excellence</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
