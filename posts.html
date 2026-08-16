@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글 목록 · t2-desk-nrb-apgujeong-guide</title>
+  <meta name="description" content="t2-desk-nrb-apgujeong-guide에 올라온 글 목록입니다.">
+  <link rel="canonical" href="https://desk.nrb-apgujeong-guide.xyz/posts.html">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <style>
+ /* CSS Reset & Variables */
+ *, *::before, *::after {
+ box-sizing: border-box;
+ margin: 0;
+ padding: 0;
+ }
+ :root {
+ --color-primary: #1a1a1a; /* Dark background */
+ --color-secondary: #ffcc00; /* Gold/Accent */
+ --color-text: #e0e0e0; /* Light text */
+ --color-text-secondary: #b0b0b0; /* Slightly dimmer text */
+ --color-background-card: #2a2a2a; /* Slightly lighter dark for cards */
+ --color-border: #444;
+ --font-family-base: 'Noto Sans KR', sans-serif;
+ --spacing-unit: 1rem;
+ --border-radius-base: 0.25rem;
+ --header-height: 4rem; /* Example height */
+ }
+ body {
+ font-family: var(--font-family-base);
+ background-color: var(--color-primary);
+ color: var(--color-text);
+ line-height: 1.6;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ }
+ /* Brutalist Layout & Structure Rules */
+ .v-foot-cvs4 { /* Footer */
+ background-color: var(--color-background-card);
+ color: var(--color-text-secondary);
+ padding: var(--spacing-unit) calc(var(--spacing-unit) * 2);
+ border-top: 1px solid var(--color-border);
+ text-align: center;
+ font-size: 0.8rem;
+ margin-top: auto; /* Pushes footer to the bottom */
+ }
+ /* Header & Navigation */
+ .k-card-l05l { /* General Card/Section Container */
+ background-color: var(--color-background-card);
+ border: 1px solid var(--color-border);
+ border-radius: var(--border-radius-base);
+ padding: calc(var(--spacing-unit) * 2);
+ margin: var(--spacing-unit);
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+ .k-card-l05l-inner { /* Inner container for card content */
+ max-width: 1200px;
+ margin: 0 auto;
+ }
+ .x-btn-vejy { /* Button style */
+ display: inline-block;
+ background-color: var(--color-secondary);
+ color: var(--color-primary);
+ padding: 0.75rem 1.5rem;
+ border: none;
+ border-radius: var(--border-radius-base);
+ cursor: pointer;
+ font-weight: 700;
+ text-decoration: none;
+ transition: background-color 0.3s ease;
+ }
+ .x-btn-vejy:hover {
+ background-color: #ffd700; /* Slightly brighter gold */
+ }
+
+ /* Navigation specifics */
+ .v-item-gd5m { /* Navigation item */
+ list-style: none;
+ display: inline-block; /* For horizontal nav */
+ margin-left: var(--spacing-unit);
+ }
+ .v-item-gd5m a { /* Navigation link */
+ color: var(--color-text);
+ text-decoration: none;
+ padding: 0.5rem 1rem;
+ display: block;
+ transition: color 0.3s ease, background-color 0.3s ease;
+ }
+ .v-item-gd5m a:hover {
+ color: var(--color-secondary);
+ background-color: rgba(255, 204, 0, 0.1);
+ border-radius: var(--border-radius-base);
+ }
+
+ /* Specific styles for header/nav structure (Hamburger menu pattern) */
+ .header-main {
+ background-color: var(--color-background-card);
+ border-bottom: 1px solid var(--color-border);
+ padding: var(--spacing-unit);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
+ }
+ .header-logo a {
+ color: var(--color-secondary);
+ font-size: 1.5rem;
+ font-weight: 700;
+ text-decoration: none;
+ }
+ .nav-menu {
+ display: flex; /* Default for larger screens */
+ }
+ .nav-toggle { /* Hamburger icon */
+ display: none; /* Hidden by default */
+ font-size: 2rem;
+ background: none;
+ border: none;
+ color: var(--color-text);
+ cursor: pointer;
+ }
+
+ /* Responsive-768 pattern */
+ @media (max-width: 768px) {
+ .nav-menu {
+ display: none; /* Hide nav links by default on small screens */
+ flex-direction: column;
+ position: absolute;
+ top: var(--header-height);
+ left: 0;
+ width: 100%;
+ background-color: var(--color-background-card);
+ border-top: 1px solid var(--color-border);
+ }
+ .nav-menu.is-open { /* Class to show menu when toggled */
+ display: flex;
+ }
+ .nav-toggle {
+ display: block; /* Show hamburger on small screens */
+ }
+ .v-item-gd5m {
+ margin: 0;
+ width: 100%;
+ text-align: center;
+ }
+ .v-item-gd5m a {
+ padding: 1rem;
+ border-bottom: 1px solid var(--color-border);
+ }
+ .v-item-gd5m:last-child a {
+ border-bottom: none;
+ }
+ }
+
+ /* Main content layout */
+ main {
+ flex-grow: 1; /* Allows main content to fill available space */
+ max-width: 1200px;
+ margin: var(--spacing-unit) auto; /* Centers content with margin */
+ padding: 0 var(--spacing-unit);
+ }
+
+ /* New Page Specific Layout for '소개' */
+ .section-header {
+ text-align: center;
+ margin-bottom: calc(var(--spacing-unit) * 3);
+ }
+ .section-header h1 {
+ font-size: 2.8rem;
+ color: var(--color-secondary);
+ margin-bottom: var(--spacing-unit);
+ line-height: 1.2;
+ }
+ .section-header p {
+ font-size: 1.1rem;
+ color: var(--color-text-secondary);
+ max-width: 800px;
+ margin: 0 auto;
+ }
+
+ .grid-container {
+ display: grid;
+ gap: calc(var(--spacing-unit) * 2);
+ margin-top: calc(var(--spacing-unit) * 3);
+ }
+
+ @media (min-width: 768px) {
+ .grid-container {
+ grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+ }
+ }
+
+ .k-card-l05l h2 {
+ color: var(--color-secondary);
+ margin-bottom: var(--spacing-unit);
+ font-size: 1.8rem;
+ }
+ .k-card-l05l p {
+ color: var(--color-text);
+ margin-bottom: var(--spacing-unit);
+ }
+ .k-card-l05l ul {
+ list-style: none;
+ padding-left: 0;
+ }
+ .k-card-l05l ul li {
+ position: relative;
+ padding-left: calc(var(--spacing-unit) * 1.5);
+ margin-bottom: 0.5rem;
+ color: var(--color-text-secondary);
+ }
+ .k-card-l05l ul li::before {
+ content: '»'; /* Custom bullet */
+ color: var(--color-secondary);
+ position: absolute;
+ left: 0;
+ font-weight: 700;
+ }
+ </style>
+  <meta property="og:title" content="글 목록 · t2-desk-nrb-apgujeong-guide">
+  <meta property="og:description" content="t2-desk-nrb-apgujeong-guide에 올라온 글 목록입니다.">
+  <meta property="og:url" content="https://desk.nrb-apgujeong-guide.xyz/posts.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+</head>
+<body>
+  <div class="container">
+    <header class="header-main">
+ <div class="header-logo">
+ <a href="/">NRB 압구정 가이드</a>
+ </div>
+ <button class="nav-toggle" aria-label="메뉴 열기/닫기">☰</button>
+ <nav class="nav-menu">
+ <ul>
+ <li class="v-item-gd5m"><a href="/">홈</a></li>
+ <li class="v-item-gd5m"><a href="/about">소개</a></li>
+ <li class="v-item-gd5m"><a href="/blog">블로그</a></li>
+ <li class="v-item-gd5m"><a href="/contact">문의</a></li>
+ </ul>
+ </nav>
+ </header>
+    <main>
+      <h1>글 목록</h1>
+      <p>전체 11개</p>
+      <ul class="post-list">
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-001-13h0pu8.html">홍대 폐업 현장 분석 – 6개월 안에 매출 3천을 기록한 내 원가 함정</a>
+        <p class="post-item__summary">6개월 만에 월 매출 3,200만원을 달성했지만 고정비 1,800만원을 초과한 채 현금 흐름이 마이너스로 전환되었다. 첫 달에 2.5㎡ 전용 임대료 2,200만원, 주류 도매가 45% 마진을 남긴 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-005-rgozjj.html">홍대 바닥에서 권리금 2억 털어먹고 나가는 놈들의 공통점</a>
+        <p class="post-item__summary">2023년 11월, 홍대입구역 9번 출구 뒷골목에서 7년 된 펍 하나가 문을 닫았습니다. 임대차 계약서에 찍힌 마지막 권리금 2억 원, 그게 이 가게의 영정 사진이었죠. 사실 이 동네에서 2억 권리</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/field_note-005-zv6egg.html">유흥 트렌드 현장에서 확인한 선택 기준과 주의점</a>
+        <p class="post-item__summary">최근 서울 지역의 유흥 트렌드는 과거와 달리 더욱 다양화되고 세분화되는 양상을 보이고 있습니다. 이용자들의 취향이 정교해짐에 따라 단순히 유흥 공간을 방문하는 것에서 벗어나 개인의 분위기와 목적에 </p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-jf44sm.html">정보 블로그 해결 방법 총정리</a>
+        <p class="post-item__summary">안녕하세요! 구체적인 지시 사항을 입력해주시면 요청하신 업무나 코딩 작업을 보조해 드리겠습니다. 어떤 작업을 진행할까요?</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/guide-004-k9nob3.html">권리금 2억의 배신, 홍대 바닥에서 살아남는 놈들의 진짜 셈법</a>
+        <p class="post-item__summary">2023년 11월, 홍대 상상마당 뒤편 골목에서 10년 넘게 버티던 바(Bar) 하나가 권리금 2억 5천을 챙겨 나갔다는 소문이 돌았지. 나는 그 가게의 최종 실거래 내역서를 훑어볼 기회가 있었는데</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-qrm69i.html">유흥 트렌드 vs 유흥 트렌드 비교</a>
+        <p class="post-item__summary">서울의 유흥 트렌드는 시대와 변화하는 소비 문화에 맞춰 꾸준히 다변화되고 있습니다. 과거에는 특정 지역이나 고전적인 형태의 유흥 공간이 주를 이루었다면, 최근에는 개개인의 취향과 목적에 맞춘 다양한</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/major_compare-001-vkz0u.html">홍대 바닥에서 살아남은 놈들은 대체 뭘 먹고 사는가</a>
+        <p class="post-item__summary">2023년 겨울, 홍대 뒷골목의 낡은 다가구 주택을 개조한 이자카야들이 줄줄이 셔터를 내리던 그 시점부터 이야기해보자. 나는 동네 단골로서 사장님이 주방 마감할 때마다 곁눈질로 영수증과 재고 현황을</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-003-1e9uskc.html">유흥 트렌드에 대한 통념과 실제 차이를 검토했다</a>
+        <p class="post-item__summary">서울의 유흥 트렌드는 시대적 상황과 소비 문화의 변화에 따라 끊임없이 재편되고 있습니다. 많은 사람이 유흥 문화를 단순히 화려하고 일회성 소비 중심의 오락으로 이해하는 경우가 많지만, 실제 현장에서</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/myth-003-ozkn1a.html">권리금 2억짜리 명당이 6개월 만에 털린 진짜 이유</a>
+        <p class="post-item__summary">임대차 계약서에 찍힌 2억 원이라는 권리금은 보통 '영업권'이 아니라 '인테리어 감가상각 면제권'에 가깝습니다. 지난달 홍대 뒷골목에서 2억을 챙겨 나간 사장을 보며 사람들은 성공이라 불렀지만, 그</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-4wejhk.html">유흥 트렌드 관련 질문을 상황별로 정리해봤다</a>
+        <p class="post-item__summary">최근 서울의 유흥 문화는 개인의 취향과 라이프스타일에 맞추어 더욱 다양해지는 추세를 보이고 있습니다. 과거 단체 모임 위주의 일률적인 형태에서 벗어나 소규모 모임이나 개별적인 맞춤형 휴식을 선호하는</p>
+      </li>
+      <li class="post-item">
+        <a class="post-item__link" href="posts/qa-002-f2231.html">권리금 2억의 판타지, 장부 찢고 들여다본 룸 서비스업의 진짜 마진율</a>
+        <p class="post-item__summary">나 역시 한때는 그 화려한 숫자에 속아 넘어간 바보 중 하나였다. 강남 한복판에서 권리금 2억 원을 주고받았다는 룸 기반 업장의 권리양수도 계약서에 도장을 찍어주며, 속으로는 '이 정도 프리미엄이면</p>
+      </li>
+      </ul>
+
+    </main>
+  </div>
+</body>
+</html>
